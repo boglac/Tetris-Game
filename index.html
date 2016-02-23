@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Tetris2000</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+		}
+        
+        canvas {
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin:auto;
+        }
+	</style>
+    <script>
+        // detect, if browser is Chrome / Firefox 
+        var isChrome = !!window.chrome && !!window.chrome.webstore;
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+    </script>
+    <script src="pixi/pixi.min.js"></script>
+    
+    <script src="src/config.js"></script>
+    
+    <script src="src/classes/matrix.js"></script>    
+    <script src="src/classes/block.js"></script>
+    <script src="src/classes/scene.js"></script>
+    <script src="src/classes/generator.js"></script>
+    <script src="src/classes/game.js"></script>
+    
+    <script src="src/setup.js"></script>
+</head>
+<body onload="init()">
+    <canvas id="game-canvas"></canvas>
+</body>
+</html>
